@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import './CumpleAlejitaMain.css'
+
+import { CumpleAlejitaMain }  from './CumpleAlejitaMain.jsx'
+import { Invitacion } from './Invitacion'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <CumpleAlejitaMain />
   </React.StrictMode>,
 )
