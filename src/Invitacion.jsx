@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react' 
+import PropTypes from 'prop-types'
 
 const invitation = {
     remitente : 'Personaje',
@@ -6,11 +7,16 @@ const invitation = {
 }
 
 
-export const Invitacion = () => {
+export const Invitacion = ({ remitente, lugar }) => {
     
   return (
     <>
-    <h1> {invitation.remitente} te ha invitado a {invitation.lugar}</h1>    
+    <h1> {remitente} te ha invitado a {lugar}</h1>    
     </>
   )
+}
+
+Invitacion.propType = {
+  remitente: PropTypes.string.isRequired,
+  lugar: PropTypes.string.isRequired,
 }
