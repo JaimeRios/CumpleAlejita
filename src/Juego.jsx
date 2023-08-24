@@ -40,10 +40,10 @@ export function Juego({challenger, wordValue, }) {
     const [tries, setTries] = useState(0);
 
     const [image, setImage] = useState(
-        "../public/Ahorcado_0.png"
+        "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Ahorcado_0.PNG"
     );
 
-    let travelOver = "../public/travelOver.png";
+    let travelOver = "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/travelOver.png";
 
     const ChangeLetterClass = (value) =>{
         let pos = 0;
@@ -121,7 +121,7 @@ export function Juego({challenger, wordValue, }) {
             console.log("intentos antes de actualizar : "+tries);
             setTries(newTries);
             console.log("intentos despues de actualizar : "+tries);
-            setImage("../public/Ahorcado_"+(newTries)+".png");
+            setImage("https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Ahorcado_"+(newTries)+".png");
             
         }else{
             console.log(realWordMask);
