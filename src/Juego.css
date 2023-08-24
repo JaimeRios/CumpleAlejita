@@ -31,6 +31,15 @@ button {
     height: 50px;
     border-radius: .5rem;
 }
+
+.btn-on {
+    background-color: rgb(104, 104, 255);
+}
+
+.btn-off {
+    background-color: rgb(128, 128, 128);
+}
+
 .delete,
 .shift,
 .space {
@@ -63,3 +72,12 @@ textarea {
 
 /* SUBSCRIBE ==> https://www.youtube.com/albdev */
 /* SUBSCRIBE ==> https://www.youtube.com/albdev */
+
+#travelEnd{
+    display: none;
+}
+#Yes, #No{
+    width: 150px;
+    height: 50px;
+    display: none;
+}
