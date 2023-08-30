@@ -81,3 +81,12 @@ textarea {
     height: 50px;
     display: none;
 }
+
+#Challengers{
+    width: 200px;
+    height: 50px;
+}
+
+#mensajeOculto{
+    display: none;
+}

@@ -1,12 +1,4 @@
 import React, {useEffect, useState} from 'react';
-/*******************************************/
-// Challanger - Palabras - Pais             /
-// Yuli - Decidida - Australia              /
-// Liz - Incondicionalidad - Noruega        /
-// Cristian - Detallista - Colombia         /
-// Santiago - Inteligente - Nueva Zelanda   /
-// Shuin - Perseverante - Francia           /
-/*******************************************/
 
 export const AppWord = (value) =>{
     let secretWord = '';
@@ -26,9 +18,20 @@ export const getRealWordMask = (value) =>{
     return secretWordMak;
 }
 
-export function Juego({challenger, wordValue, }) {
+export function Juego({challenger, wordValue, message, country, imageTogether}) {
 
     const letter = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+    
+    const imagesLink = [
+        "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Ahorcado_0.PNG",
+        "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Ahorcado_1.PNG",
+        "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Ahorcado_2.PNG",
+        "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Ahorcado_3.PNG",
+        "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Ahorcado_4.PNG",
+        "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Ahorcado_5.PNG",
+        "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Ahorcado_6.PNG"
+    ]
+
     const [letterClass, setLetterClass]= useState([true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true ]);
 
     const [realWordMask, setRealWordMask] = useState(getRealWordMask(wordValue));   
@@ -43,7 +46,7 @@ export function Juego({challenger, wordValue, }) {
         "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Ahorcado_0.PNG"
     );
 
-    let travelOver = "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/travelOver.png";
+    let travelOver = "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/travelOver.PNG";
 
     const ChangeLetterClass = (value) =>{
         let pos = 0;
@@ -60,7 +63,7 @@ export function Juego({challenger, wordValue, }) {
         }else{
             //Resetear variables
             setTries(0);
-            setImage("../public/Ahorcado_"+(0)+".png");
+            setImage("https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Ahorcado_0.PNG");
             setWord(AppWord(wordValue));
             setRealWordMask(getRealWordMask(wordValue));
             ChangeLetterClass(true);
@@ -73,10 +76,12 @@ export function Juego({challenger, wordValue, }) {
     const discoverWorld = (value) =>{
         let secretWord = '';
         let posDiscover = 0;
+        let isWiner = true;
         value.split("").forEach(element => {
             console.log("Posicion a descubrir valor en "+posDiscover + ": "+realWordMask[posDiscover])
             if(realWordMask[posDiscover]===0){
                 secretWord += '_'+' ';
+                isWiner = false;
             }
             else{                
                 secretWord += element+' ';
@@ -85,6 +90,9 @@ export function Juego({challenger, wordValue, }) {
         });
         setWord(secretWord);
         console.log(secretWord);
+        if(isWiner===true){
+            document.getElementById("mensajeOculto").style.display = "inline";
+        }
     }
 
     const checkValue = (value) =>{
@@ -121,7 +129,7 @@ export function Juego({challenger, wordValue, }) {
             console.log("intentos antes de actualizar : "+tries);
             setTries(newTries);
             console.log("intentos despues de actualizar : "+tries);
-            setImage("https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Ahorcado_"+(newTries)+".png");
+            setImage("https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Ahorcado_"+(newTries)+".PNG");
             
         }else{
             console.log(realWordMask);
@@ -132,7 +140,7 @@ export function Juego({challenger, wordValue, }) {
 
   return (
     <>
-        <div>{challenger} te ha desafiado</div>
+        <div>{challenger} te ha desafiado en {country}</div>
         <div>
             <div>
                 <img  src={image} width="100" height="200"/>
@@ -181,6 +189,14 @@ export function Juego({challenger, wordValue, }) {
         </div>
         <div>
             { word }
+        </div>
+        <div id='mensajeOculto'>
+            <div className='row'>
+                <img  src={imageTogether} width="600" height="300"/>
+            </div>
+            <div className='row'>
+                { message }
+            </div>
         </div>
     </>
   )
