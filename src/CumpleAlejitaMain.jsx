@@ -22,7 +22,7 @@ export function CumpleAlejitaMain(){
     ]
 
     const imagesLink = [
-        "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Alejita_Liz.jpg",
+        "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Alejita_Liz.jgeg",
         "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Alejita_Yuli.jpeg",
         "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Alejita_Santi.jpg",
         "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Alejita_Cristian.png",
