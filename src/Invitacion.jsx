@@ -1,17 +1,12 @@
 import React from 'react' 
 import PropTypes from 'prop-types'
 
-const invitation = {
-    remitente : 'Personaje',
-    lugar: 'Pais'
-}
-
-
-export const Invitacion = ({ remitente, lugar }) => {
+export function Invitacion ({ remitente, lugar, link }) {
     
   return (
     <>
-    <h1> {remitente} te ha invitado a {lugar}</h1>    
+    <h1> {remitente} te ha invitado a {lugar}</h1>
+    <Link to={link}>Aceptar</Link> 
     </>
   )
 }
