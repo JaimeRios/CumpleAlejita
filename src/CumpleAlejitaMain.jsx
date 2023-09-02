@@ -17,12 +17,12 @@ export function CumpleAlejitaMain(){
         "Amigas como tu son un tesoro que se encuentra uno en la vida pocas veces y desea conservar para siempre",
         "Alejita somos muy afortunados de tenerte en nuestras vidas. Gracias por ser y estar, por esa luz tan linda que irradias y ese amor con el que te vinculas. Mereces lo mejor y hoy es una gran oportunidad de desearte mucho más amor, luz, abundancia, salud y momentos de alegría en tu vida. Te quiero mucho Alejit  bella que tengas un gran cumpleaños",
         "Deseo que la vida siempre te brinde el doble de las cosas buenas que das, un abrazo",
-        "Hola",
+        "Aleja, muchas gracias por tu amistad, por ser parte de nuestras vidas y llenarnos con tu tranquilidad, espero que sea un día lleno de amor y felicidad. Un gran abrazo.",
         "Alejita, para mi siempre has sido una persona muy teza, has logrado obtener grandes metas y estoy seguro que esta hecha para mucho mas, ve a tu ritmo y lo iras comprendiendo poco a poco.",
     ]
 
     const imagesLink = [
-        "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Alejita_Liz.jgeg",
+        "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Alejita_Liz.jpeg",
         "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Alejita_Yuli.jpeg",
         "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Alejita_Santi.jpg",
         "https://raw.githubusercontent.com/JaimeRios/CumpleAlejita/master/public/Alejita_Cristian.png",
